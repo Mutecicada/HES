@@ -12,5 +12,25 @@ def index():
 def login():
     return render_template('login.html')
 
+@app.route('/language')
+def language():
+    return render_template('language.html')
+
+@app.route('/system')
+def system():
+    return render_template('system.html')
+
+@app.route('/web')
+def web():
+    return render_template('web.html')
+
+@app.route('/network')
+def network():
+    return render_template('network.html')
+
+@app.route('/algorythm')
+def algorythm():
+    return render_template('algorythm.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

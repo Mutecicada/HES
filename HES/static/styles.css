@@ -16,7 +16,6 @@ body {
 #HACK {
     color:white;
     font-size: 40px;
-    margin-bottom: 5%;
     font-weight: 900;
     line-height: 170px;
 }
@@ -24,11 +23,29 @@ body {
 #loginbox {
     background-color: #ffffff;
     position: absolute;
-    top: 25px;
-    left: 1170px;
+    top: 3%;
+    left: 82%;
     width: 92px;
     height: 36px;
     text-align: center;
     line-height: 30px;
     font-size: 15px;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    width: 17%;
+    line-height: -170px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.list {
+    position: relative;
+    top: -30%;
 }

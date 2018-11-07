@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="{{ url_for('static', filename='script/includeHTML.js' }}"></script>
-        <title>H@CK</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
     </head>
     <body>
-        <div id=header><span id=HACK>H@CK</div>
+        {% include 'header.html' %}
         <a href="{{ url_for('login') }}"><input type="button" value="LOGIN" id=loginbox></a>
     </body>
 </html>
