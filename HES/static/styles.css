@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
 #header {
     background-color: rgb(52, 152, 219);
     text-align: center;
@@ -48,4 +50,14 @@ a {
 .list {
     position: relative;
     top: -30%;
+}
+
+.form-signin .form-control {
+    display: table;
+    position: relative;
+    height: auto;
+    width: 290px;
+    padding: 10px;
+    font-size: 16px;
+    margin: auto;
 }
