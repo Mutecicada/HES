@@ -54,20 +54,10 @@ a {
 
 .form-signin .form-control {
     display: table;
+    position: relative;
     height: auto;
     width: 290px;
     padding: 10px;
     font-size: 16px;
     margin: auto;
-}
-
-#login {
-    display: table;
-    margin: auto;
-    font-size: 25px;
-    border: 0;
-    outline: 0;
-    background-color: rgb(52, 152, 219);
-    width: 290px;
-    height: 40px; color: white;
 }
