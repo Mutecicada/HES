@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 
 from flask import Flask, render_template
-from HES.user import login
+from user import login
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
@@ -37,6 +37,9 @@ def network():
 def algorythm():
     return render_template('algorythm.html')
 
+@app.route('/regist/')
+def regist():
+    return render_template('regist.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
