@@ -5,10 +5,14 @@
     </head>
     <body>
         {% include 'header.html' %}
+<<<<<<< HEAD
         {% if session['user'] %}
             <a href="{{ url_for('user.logout') }}"><input type="button" value="LOGOUT"></a>
         {% else %}
             <a href="{{ url_for('user.login') }}"><input type="button" value="LOGIN" id=loginbox></a>
         {% endif %}
+=======
+        <a href="{{ url_for('login') }}"><input style="background-color:white" type="button" value="LOGIN" id=loginbox></a>
+>>>>>>> 86d92c172a8525109f2b9b56c63eae130e87e24e
     </body>
 </html>
