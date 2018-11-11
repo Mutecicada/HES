@@ -6,14 +6,14 @@
     </head>
     <body>
         <div id=header>
-            <span id=HACK>Login</span>
+            <span id=HACK>Sing Up</span>
         </div>
         <form class="form-signin" method="POST" onSubmit="logincall();return false">
-                <h3 class="form-signing" style="margin-left: 39.5%; margin-top: 3.2%">로그인</h3>
+                <h3 class="form-signing" style="margin-left: 39.5%; margin-top: 3.2%">회원가입</h3>
                 <input type="text" id="uid" class="form-control" placeholder="ID" style="margin-top:2.5%;" required autofocus><br>
                 <input type="password" id="upw" class="form-control" placeholder="Password" style="margin-top: 0.4%;" required><br>
-                <a href="{{ url_for('regist') }}"><p style="text-align: center; left: 45; color: black;">회원가입</p></a><br>
-                <button type="submit" id="login">Login</button>
+                <input type="text" id="ucode" class="form-control" placeholder="Code" style="margin-top: 0.4%;" required><br>
+                <button type="submit" id="login">Sign Up</button>
         </form>
     </body>
 </html>

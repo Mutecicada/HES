@@ -32,5 +32,9 @@ def network():
 def algorythm():
     return render_template('algorythm.html')
 
+@app.route('/regist')
+def regist():
+    return render_template('regist.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

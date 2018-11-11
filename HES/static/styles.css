@@ -61,3 +61,12 @@ a {
     font-size: 16px;
     margin: auto;
 }
+
+#login {
+    font-size: 25px;
+    border: 0;
+    outline: 0;
+    background-color: rgb(52, 152, 219);
+    margin-left: 40%;
+    width: 290px; height: 40px; color: white;
+}
