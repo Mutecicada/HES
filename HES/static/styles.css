@@ -1,5 +1,3 @@
-@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-
 #header {
     background-color: rgb(52, 152, 219);
     text-align: center;
@@ -32,6 +30,7 @@ body {
     text-align: center;
     line-height: 30px;
     font-size: 15px;
+    border: 0;
 }
 
 li {
@@ -52,22 +51,27 @@ a {
     top: -30%;
 }
 
-.form-signin .form-control {
+.form-signin {
+    width: 290px;
+    margin: 0 auto;
+}
+
+.form-control {
     display: table;
     height: auto;
-    width: 290px;
     padding: 10px;
     font-size: 16px;
-    margin: auto;
+    margin: 0 auto;
+    width: 100%;
 }
 
 #login {
     display: table;
-    margin: auto;
+    margin: 0 auto;
     font-size: 25px;
     border: 0;
-    outline: 0;
     background-color: rgb(52, 152, 219);
-    width: 290px;
-    height: 40px; color: white;
+    height: 40px;
+    color: white;
+    width: 110%;
 }
