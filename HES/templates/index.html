@@ -6,9 +6,9 @@
     <body>
         {% include 'header.html' %}
         {% if session['user'] %}
-            <a href="{{ url_for('user.logout') }}"><input type="button" value="LOGOUT"></a>
+            <a href="{{ url_for('loginBp.logout') }}"><input type="button" value="LOGOUT"></a>
         {% else %}
-            <a href="{{ url_for('user.login') }}"><input type="button" value="LOGIN" id=loginbox></a>
+            <a href="{{ url_for('loginBp.login') }}"><input type="button" value="LOGIN" id=loginbox></a>
         {% endif %}
     </body>
 </html>

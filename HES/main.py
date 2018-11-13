@@ -5,7 +5,7 @@ from HES.user import login
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
-app.register_blueprint(login.user)
+app.register_blueprint(login.loginBp)
 
 
 @app.route('/')

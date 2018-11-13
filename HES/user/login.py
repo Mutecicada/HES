@@ -4,10 +4,10 @@ from flask import (
 from DB import DataBase
 from werkzeug.security import check_password_hash
 
-user = Blueprint('user', __name__)
+loginBp = Blueprint('loginBp', __name__)
 
 
-@user.route('/login/', methods=['GET', 'POST'])
+@loginBp.route('/login/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         user_id = request.form['id']
@@ -15,32 +15,29 @@ def login():
         error = None
 
         db = DataBase()
-        db.get_cursor()
+        db.get_cur()
 
         db.cur.execute(
             'SELECT id,passwd FROM usr WHERE id = %s', (user_id,)
         )
-
         userData = db.cur.fetchone()
+        db.db_close()
 
-        if userData is None:
-            error = '잘못된 정보입니다'
-        elif not check_password_hash(userData['passwd'], user_pw):
+        if userData is None \
+                or not check_password_hash(userData['passwd'], user_pw):
             error = '잘못된 정보입니다'
 
         if error is None:
             session['user'] = userData['id']
-            db.db_close()
 
             return redirect(url_for('index'))
 
         flash(error)
-        db.db_close()
 
     return render_template('login.html')
 
 
-@user.route('/logout/')
+@loginBp.route('/logout/')
 def logout():
     session.pop('user', None)
 

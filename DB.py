@@ -12,7 +12,7 @@ class DataBase:
         )
         self.cur = None
 
-    def get_cursor(self):
+    def get_cur(self):
         self.cur = self.db.cursor(pymysql.cursors.DictCursor)
 
     def db_close(self):
