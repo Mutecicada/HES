@@ -24,7 +24,7 @@ def login():
 
         if userData is None \
                 or not check_password_hash(userData['passwd'], user_pw):
-            error = '잘못된 정보입니다'
+            error = '아이디 또는 비밀번호를 다시 확인하세요'
 
         if error is None:
             session['user'] = userData['id']
