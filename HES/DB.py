@@ -7,6 +7,7 @@ class DataBase:
             host='localhost',
             user='root',
             passwd='tt05290923',
+            passwd='028358kk',
             db='HES',
             charset='utf8'
         )
