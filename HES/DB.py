@@ -5,8 +5,8 @@ class DataBase:
     def __init__(self):
         self.db = pymysql.connect(
             host='localhost',
-            user='',
-            passwd='',
+            user='root',
+            passwd='tt05290923',
             db='HES',
             charset='utf8'
         )
@@ -14,6 +14,9 @@ class DataBase:
 
     def get_cur(self):
         self.cur = self.db.cursor(pymysql.cursors.DictCursor)
+
+    def cmt(self):
+        self.db.commit()
 
     def db_close(self):
         self.db.close()

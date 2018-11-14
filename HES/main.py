@@ -1,16 +1,22 @@
 #-*- coding:utf-8 -*-
 
 from flask import Flask, render_template
-from user import login
+from HES.user import login, regist
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
 app.register_blueprint(login.loginBp)
+app.register_blueprint(regist.RegistBp)
 
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+@app.route('/editor/')
+def editor():
+    return render_template('editor.html')
 
 
 @app.route('/language/')
@@ -37,9 +43,6 @@ def network():
 def algorythm():
     return render_template('algorythm.html')
 
-@app.route('/regist/')
-def regist():
-    return render_template('regist.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

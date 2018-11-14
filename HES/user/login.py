@@ -1,10 +1,9 @@
-from flask import (
+from flask import \
     request, render_template, Blueprint, redirect, url_for, session, flash
-)
-from DB import DataBase
+from HES.DB import DataBase
 from werkzeug.security import check_password_hash
 
-loginBp = Blueprint('loginBp', __name__)
+loginBp = Blueprint('loginBp', __name__, url_prefix='/user')
 
 
 @loginBp.route('/login/', methods=['GET', 'POST'])
