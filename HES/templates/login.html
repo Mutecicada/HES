@@ -9,11 +9,11 @@
             <span id=HACK>Login</span>
         </div>
         <form class="form-signin" method="POST" onSubmit="logincall();return false">
-            <h3 class="form-signin" style="margin-left: 42%; margin-top: 3.2%">로그인</h3>
-            <input type="text" id="uid" class="form-control" placeholder="ID" style="margin-top:2.5%;" name="id"required autofocus><br>
-            <input type="password" id="upw" class="form-control" placeholder="Password" style="margin-top: 0.4%;" name="passwd" required><br>
-            <a href="{{ url_for('RegistBp.register') }}"><p style="text-align: center; left: 45; color: black;">회원가입</p></a><br>
-            <button type="submit" id="login" class="form-signin">Login</button>
+            <h3 class="form-name">로그인</h3>
+            <input type="text" id="uid" class="form-control" placeholder="ID" style="margin-top:2.5%;" name='id' required autofocus><br>
+            <input type="password" id="upw" class="form-control" placeholder="Password" style="margin-top: 0.4%;" name='passwd' required><br>
+            <a href="{{ url_for('RegistBp.register') }}"><p style="text-align: center; color: black;">회원가입</p></a><br>
+            <button type="submit" id="login" class="form-login">Login</button>
         </form>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
