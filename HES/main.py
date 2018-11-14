@@ -17,12 +17,6 @@ def index():
 def editor():
     return render_template('editor.html')
 
-
-@app.route('/editor/')
-def editor():
-    return render_template('editor.html')
-
-
 @app.route('/language/')
 def language():
     return render_template('language.html')
