@@ -12,6 +12,10 @@ app.register_blueprint(login.loginBp)
 def index():
     return render_template('index.html')
 
+@app.route('/editor/')
+def editor():
+    return render_template('editor.html')
+
 
 @app.route('/language/')
 def language():
