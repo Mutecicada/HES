@@ -11,7 +11,8 @@ app.register_blueprint(regist.RegistBp)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    url = 'index'
+    return render_template('index.html',url=url)
 
 
 @app.route('/editor/')
@@ -21,27 +22,32 @@ def editor():
 
 @app.route('/language/')
 def language():
-    return render_template('language.html')
+    url = 'language'
+    return render_template('index.html',url=url)
 
 
 @app.route('/system/')
 def system():
-    return render_template('system.html')
+    url = 'system'
+    return render_template('index.html',url=url)
 
 
 @app.route('/web/')
 def web():
-    return render_template('web.html')
+    url = 'web'
+    return render_template('index.html',url=url)
 
 
 @app.route('/network/')
 def network():
-    return render_template('network.html')
+    url = 'network'
+    return render_template('index.html',url=url)
 
 
 @app.route('/algorythm/')
 def algorythm():
-    return render_template('algorythm.html')
+    url = 'algorithm'
+    return render_template('index.html',url=url)
 
 
 if __name__ == '__main__':

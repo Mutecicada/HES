@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-
     </head>
     <body>
         {% include 'header.html' %}
+        {% if url=='index' %}
+            {% endif %}
+        {% if url=='language' %}
+            <div class="wrap">
+                <img src="/static/c.png" alt="c">
+                <img src="/static/python.png" alt="python">
+            </div>
+        {% endif %}
     </body>
 </html>

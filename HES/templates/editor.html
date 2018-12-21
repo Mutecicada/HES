@@ -5,5 +5,9 @@
     </head>
     <body>
         {% include 'header.html' %}
+        <form class="editor" method="POST">
+            <input id="title" type="text" placeholder="Title" required autofocus><br>
+            <textarea id="contents" placeholder="Contents" rows="15" required></textarea><br>
+        </form>
     </body>
 </html>
