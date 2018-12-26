@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <script type="text/javascript" src="{{ url_for('static', filename='javascript/ckeditor/ckeditor.js') }}"></script>
     </head>
     <body>
         {% include 'header.html' %}
         <form class="editor" method="POST">
             <input id="title" type="text" placeholder="Title" required autofocus><br>
-            <textarea id="contents" placeholder="Contents" rows="15" required></textarea><br>
+            <textarea id="contents" required></textarea><br>
+            <script>
+                CKEDITOR.replace('contents');
+            </script>
         </form>
     </body>
 </html>
