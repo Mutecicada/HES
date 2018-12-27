@@ -29,7 +29,7 @@ def language():
 @app.route('/system/')
 def system():
     url = 'system'
-    return render_template('index.html',url=url)
+    return render_template('board.html',url=url)
 
 
 @app.route('/web/')
@@ -41,14 +41,17 @@ def web():
 @app.route('/network/')
 def network():
     url = 'network'
-    return render_template('index.html',url=url)
+    return render_template('board.html',url=url)
 
 
 @app.route('/algorythm/')
 def algorythm():
     url = 'algorithm'
-    return render_template('index.html',url=url)
+    return render_template('board.html',url=url)
 
+@app.route('/board/')
+def board():
+    return render_template('board.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

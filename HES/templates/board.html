@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        {% include 'header.html' %}
+        <div class="index">
+            <div class="vertical-line">&nbsp;</div>
+        </div>
+        <div>
+            <a href="{{ url_for('editor') }}"><input type="button" id="write" value="글쓰기"></a>
+            <input type="button" id="modified" value="수정">  
+        </div>
+    </body>
+</html>

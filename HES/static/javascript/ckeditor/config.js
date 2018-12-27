@@ -9,5 +9,5 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
 	config.height = 300;
 	config.width = 900;
-	config.filebrowserUploadUrl = '/editor/upload.py';
+	config.filebrowserUploadUrl = '/editor/upload';
 };
