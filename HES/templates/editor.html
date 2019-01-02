@@ -6,8 +6,8 @@
     <body>
         {% include 'header.html' %}
         <form class="editor" method="POST">
-            <input id="title" type="text" placeholder="Title" required autofocus><br>
-            <textarea id="contents" required></textarea><br>
+            <input id="title" type="text" placeholder="Title" name="title" required autofocus><br>
+            <textarea id="contents" name="post" required></textarea><br>
             <script>
                 CKEDITOR.replace('contents');
             </script>

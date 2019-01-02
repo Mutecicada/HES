@@ -7,7 +7,12 @@
             <div class="vertical-line">&nbsp;</div>
         </div>
         <div>
-            <a href="{{ url_for('editor') }}"><input type="button" id="write" value="글쓰기"></a>
+            {% if data %}
+                {% for data in data %}
+                    <p>{{ data }}</p>
+                {% endfor %}
+            {% endif %}
+            <a href="{{ url_for('editorBp.editor') }}"><input type="button" id="write" value="글쓰기"></a>
             <input type="button" id="modified" value="수정">  
         </div>
     </body>
