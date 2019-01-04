@@ -7,6 +7,7 @@ from HES.DB import DataBase
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
+app.config['CKEDITOR_FILE_UPLOADER'] = 'upload'
 
 app.register_blueprint(login.loginBp)
 app.register_blueprint(regist.RegistBp)
