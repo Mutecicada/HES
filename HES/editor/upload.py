@@ -1,6 +1,6 @@
 from flask import \
     Blueprint, render_template, request, redirect, current_app, url_for
-from HES.DB import DataBase
+from DB import DataBase
 import os
 import json
 import datetime

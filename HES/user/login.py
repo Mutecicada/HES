@@ -1,6 +1,6 @@
 from flask import \
     request, render_template, Blueprint, redirect, url_for, session, flash
-from HES.DB import DataBase
+from DB import DataBase
 from werkzeug.security import check_password_hash
 
 loginBp = Blueprint('loginBp', __name__, url_prefix='/user')

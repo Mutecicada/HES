@@ -134,3 +134,11 @@ div.vertical-line{
     margin-right: auto;
     width: 1px;
 }
+
+.wrap {
+    text-align: center;
+}
+
+img {
+    margin:5%;
+}

@@ -1,9 +1,9 @@
 #-*- coding:utf-8 -*-
 
 from flask import Flask, render_template
-from HES.user import login, regist
-from HES.editor import upload
-from HES.DB import DataBase
+from user import login, regist
+from editor import upload
+from DB import DataBase
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'dev'
@@ -29,7 +29,7 @@ def language():
 @app.route('/system/')
 def system():
     url = 'system'
-    return render_template('board.html', url=url)
+    return render_template('board.html')
 
 
 @app.route('/web/')
@@ -41,7 +41,7 @@ def web():
 @app.route('/network/')
 def network():
     url = 'network'
-    return render_template('board.html', url=url)
+    return render_template('board.html')
 
 
 @app.route('/algorythm/')
@@ -54,9 +54,9 @@ def algorythm():
         'SELECT title FROM board'
     )
 
-    data = db.cur.fetchall()
+    title = db.cur.fetchall()
 
-    return render_template('board.html', url=url, data=data)
+    return render_template('board.html', url=url, title=title)
 
 
 @app.route('/board/')

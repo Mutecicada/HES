@@ -8,8 +8,8 @@
             {% endif %}
         {% if url=='language' %}
             <div class="wrap">
-                <img src="/static/c.png" alt="c">
-                <img src="/static/python.png" alt="python">
+                <a href="{{ url_for('board') }}"><img src="/static/c.png" alt="c"></a>
+                <a href="{{ url_for('board') }}"><img src="/static/python.png" width="160px" alt="python"></a>
             </div>
         {% endif %}
     </body>
