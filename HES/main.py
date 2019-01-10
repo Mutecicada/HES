@@ -51,12 +51,12 @@ def algorythm():
     db.get_cur()
 
     db.cur.execute(
-        'SELECT title FROM board'
+        'SELECT * FROM board'
     )
 
-    title = db.cur.fetchall()
+    data = db.cur.fetchall()
 
-    return render_template('board.html', url=url, title=title)
+    return render_template('board.html', url=url, data=data)
 
 
 @app.route('/board/')

@@ -12,5 +12,11 @@
                 <a href="{{ url_for('board') }}"><img src="/static/python.png" width="160px" alt="python"></a>
             </div>
         {% endif %}
+        {% if url=='web' %}
+            <div class="wrap">
+                <a href="{{ url_for('board') }}"><img src="/static/front.png" alt="front"></a>
+                <a href="{{ url_for('board') }}"><img src="/static/server.png" alt="backend"></a>
+            </div>
+        {% endif %}
     </body>
 </html>

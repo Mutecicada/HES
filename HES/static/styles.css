@@ -124,15 +124,13 @@ a {
     margin-left: 65%;
 }
 
-div.index{
-    width: 700px;
-}
-div.vertical-line{
-    border-left: 1px solid #808080;
-    height: 500px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1px;
+.index {
+    display: inline-block;
+    width: 20%;
+    height: 60vh;
+    border-right: 1px solid black;
+    margin-left: 10%;
+    margin-bottom: 1%;
 }
 
 .wrap {
@@ -141,4 +139,12 @@ div.vertical-line{
 
 img {
     margin:5%;
+}
+
+.post {
+    display: inline-block;
+    width: 40%;
+    border: 1px solid black;
+    margin-left: 2%;
+    margin-right: 10%;
 }
