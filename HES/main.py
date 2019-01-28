@@ -15,53 +15,27 @@ app.register_blueprint(upload.editorBp)
 
 
 @app.route('/')
-def index():
-    url = 'index'
-    return render_template('index.html', url=url)
+def main():
+    return render_template('index.html')
 
 
-@app.route('/language/')
-def language():
-    url = 'language'
-    return render_template('index.html', url=url)
+@app.route('/<category>/')
+def index(category):
+    con1 = ['language', 'web']
+    if category in con1:
+        print('url ok')
+        return render_template('index.html', url=category)
+    else:
+        db = DataBase()
+        db.get_cur()
 
+        db.cur.execute(
+            'SELECT * FROM board WHERE category = %s', (category,)
+        )
 
-@app.route('/system/')
-def system():
-    url = 'system'
-    return render_template('board.html')
+        data = db.cur.fetchall()
 
-
-@app.route('/web/')
-def web():
-    url = 'web'
-    return render_template('index.html', url=url)
-
-
-@app.route('/network/')
-def network():
-    url = 'network'
-    return render_template('board.html')
-
-
-@app.route('/algorythm/')
-def algorythm():
-    url = 'algorithm'
-    db = DataBase()
-    db.get_cur()
-
-    db.cur.execute(
-        'SELECT * FROM board'
-    )
-
-    data = db.cur.fetchall()
-
-    return render_template('board.html', url=url, data=data)
-
-
-@app.route('/board/')
-def board():
-    return render_template('board.html')
+        return render_template('board.html', url=category, data=data)
 
 
 if __name__ == '__main__':

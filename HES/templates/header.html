@@ -6,14 +6,14 @@
     </head>
     <body>
         <div id=header>
-            <a href="{{ url_for('index') }}"><span id=HACK>H@CK</span></a>
+            <a href="{{ url_for('main') }}"><span id=HACK>H@CK</span></a>
             <div class=list>
                 <ul>
-                    <li><h2><a href="{{ url_for('language') }}">Language</a></h2></li>
-                    <li><h2><a href="{{ url_for('algorythm') }}">Algorithm</a></h2></li>
-                    <li><h2><a href="{{ url_for('network') }}">Network</a></h2></li>
-                    <li><h2><a href="{{ url_for('web') }}">Web</a></h2></li>
-                    <li><h2><a href="{{ url_for('system') }}">System</a></h2></li>
+                    <li><h2><a href="{{ url_for('index', category='language') }}">Language</a></h2></li>
+                    <li><h2><a href="{{ url_for('index', category='algorithm') }}">Algorithm</a></h2></li>
+                    <li><h2><a href="{{ url_for('index', category='network') }}">Network</a></h2></li>
+                    <li><h2><a href="{{ url_for('index', category='web') }}">Web</a></h2></li>
+                    <li><h2><a href="{{ url_for('index', category='system') }}">System</a></h2></li>
                 </ul>
             </div>
         </div>

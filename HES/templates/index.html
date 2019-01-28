@@ -8,14 +8,14 @@
             {% endif %}
         {% if url=='language' %}
             <div class="wrap">
-                <a href="{{ url_for('board') }}"><img src="/static/c.png" alt="c"></a>
-                <a href="{{ url_for('board') }}"><img src="/static/python.png" width="160px" alt="python"></a>
+                <a href="{{ url_for('index', category='c') }}"><img src="/static/c.png" alt="c"></a>
+                <a href="{{ url_for('index', category='python') }}"><img src="/static/python.png" width="160px" alt="python"></a>
             </div>
         {% endif %}
         {% if url=='web' %}
             <div class="wrap">
-                <a href="{{ url_for('board') }}"><img src="/static/front.png" alt="front"></a>
-                <a href="{{ url_for('board') }}"><img src="/static/server.png" alt="backend"></a>
+                <a href="{{ url_for('index', category='front') }}"><img src="/static/front.png" alt="front"></a>
+                <a href="{{ url_for('index', category='server') }}"><img src="/static/server.png" alt="backend"></a>
             </div>
         {% endif %}
     </body>
