@@ -23,14 +23,13 @@ def editor():
         post = request.form['post']
 
         db = DataBase()
-        db.get_cur()
 
         db.cur.execute(
             'INSERT INTO board(title,post) VALUES (%s, %s)',
             (title, post)
         )
-        db.cmt()
-        db.db_close()
+        db.db.commit()
+        db.db.close()
 
         return redirect(url)
     else:

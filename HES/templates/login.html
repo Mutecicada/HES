@@ -12,7 +12,7 @@
             <h3 class="form-name">로그인</h3>
             <input type="text" id="uid" class="form-control" placeholder="ID" name='id' required autofocus><br>
             <input type="password" id="upw" class="form-control" placeholder="Password" name='passwd' required><br>
-            <a href="{{ url_for('RegistBp.register') }}"><p style="text-align: center; color: black;">회원가입</p></a><br>
+            <a href="{{ url_for('account.register') }}"><p style="text-align: center; color: black;">회원가입</p></a><br>
             <button type="submit" id="login" class="form-login">Login</button>
         </form>
         {% with messages = get_flashed_messages() %}

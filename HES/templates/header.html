@@ -18,9 +18,9 @@
             </div>
         </div>
         {% if session['user'] %}
-            <a href="{{ url_for('loginBp.logout') }}"><input type="button" value="LOGOUT" id=loginbox></a>
+            <a href="{{ url_for('account.logout') }}"><input type="button" value="LOGOUT" id=loginbox></a>
         {% else %}
-            <a href="{{ url_for('loginBp.login') }}"><input type="button" value="LOGIN" id=loginbox></a>
+            <a href="{{ url_for('account.login') }}"><input type="button" value="LOGIN" id=loginbox></a>
         {% endif %}
     </body>
 </html>
